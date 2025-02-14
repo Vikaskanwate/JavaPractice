@@ -1,4 +1,5 @@
 // replace the array with the another element in specified index 
+package Array;
 public class Array4 {
     public static int [] arr(int arr[],int pos,int num){
         for(int i = 0; i < arr.length -1; i++){
