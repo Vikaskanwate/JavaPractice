@@ -1,4 +1,5 @@
 package Array;
+// print the 2D array in java
 public class Array7 {
     public static void printf(int arr[][]){
         for(int i = 0; i < arr.length; i++){

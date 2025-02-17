@@ -1,4 +1,5 @@
 package Array;
+// find the max element in array
 public class Array6 {
     public static int Max(int arr[]){
         int max = arr[0];
@@ -8,7 +9,6 @@ public class Array6 {
             }
         }
         return max;
-
     }
     public static void main(String args[]){
         int arr[] = {10,20,50,40};
