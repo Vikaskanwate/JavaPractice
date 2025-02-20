@@ -1,4 +1,5 @@
 package Array;
+// max and min in array
 public class Array1{
     @SuppressWarnings("unused")
     public static int length(int arr[]){

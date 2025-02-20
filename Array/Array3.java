@@ -1,5 +1,6 @@
 package Array;
 
+
 public class Array3 {
     public static int sumOfArrayElements(int arr[]){
         int sum = 0;
