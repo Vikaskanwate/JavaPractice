@@ -1,6 +1,5 @@
 package Array;
 
-
 public class Array3 {
     public static int sumOfArrayElements(int arr[]){
         int sum = 0;
@@ -29,7 +28,5 @@ public class Array3 {
         System.out.println("sum of elements of array is " + sumOfArrayElements(arr));
         System.out.println("average of array elements is " + AvgOfArrayElements(arr));
         System.out.println("target " + targetElement(arr, 70));
-
-
     }
 }
