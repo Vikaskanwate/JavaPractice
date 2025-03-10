@@ -9,7 +9,7 @@ public class MaxSubArray1 {
         for(var i : arr){
             currSum += i;
             maxSum  = Integer.max(currSum, maxSum);
-            if(currSum > 0){
+            if(currSum < 0){
                 currSum = 0;
             }
         }
