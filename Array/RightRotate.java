@@ -11,9 +11,9 @@ public class RightRotate {
         }
     }
     public static void rightRotate(int arr[],int n,int d){
-        RightRotate.Reverse(arr, n-d, n-1);
-        RightRotate.Reverse(arr, 0, n-d-1);
-        RightRotate.Reverse(arr, 0, n-1);
+        Reverse(arr, n-d, n-1);
+        Reverse(arr, 0, n-d-1);
+        Reverse(arr, 0, n-1);
     
     }
     
