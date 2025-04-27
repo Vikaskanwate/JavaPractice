@@ -15,6 +15,7 @@ public class LongestSequence{
             int x = arr[i];
             int cnt = 1;
             while (ls(arr, x + 1) == true) {
+                // to break the condition we have x += 1;
                 x += 1;
                 cnt= cnt + 1;
             }
