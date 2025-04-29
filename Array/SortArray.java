@@ -4,7 +4,7 @@ package Array;
 public class SortArray {
     public static void sort(int arr[]){
         int n = arr.length;
-        int cnt0=0,cnt1 = 0, cnt2 = 0; 
+        int cnt0=0,cnt1 = 0;int cnt2 = 0 ; 
         for(int i = 0; i < n; i++){
             if(arr[i] == 0){
                 cnt0++;
