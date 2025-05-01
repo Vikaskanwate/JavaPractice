@@ -18,7 +18,6 @@ public class missingNumBetter {
         int a[] = {1, 2, 4, 5};
         int N = 5; 
         // why five because a missing array always contains the length + 1 elemets that's way
-
         int ans = find(a, N);
         System.out.println("The missing number is: " + ans);
     }
