@@ -11,8 +11,9 @@ public class StringLookup {
         return result.toString().trim();
     }
 
+
     public static void main(String[] args) {
-        int number = 125643;
+        int number = 1245;
         System.out.println(convertToWords(number));
     }
 }
