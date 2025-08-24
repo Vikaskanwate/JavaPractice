@@ -1,21 +1,19 @@
 package com.phoenix.employee.service;
 
-import com.phoenix.employee.model.employee;
+import com.phoenix.employee.model.Employee;
 import com.phoenix.employee.repository.EmployeeRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class employeeService {
+@AllArgsConstructor
+public class EmployeeService {
 
     private final EmployeeRepository employeeRepository;
 
-    public employeeService(EmployeeRepository employeeRepository){
-        this.employeeRepository = employeeRepository;
-    }
-
-    public List<employee> getAllEmployee(){
+    public List<Employee> getAllEmployee(){
         return employeeRepository.findAll();
     }
 

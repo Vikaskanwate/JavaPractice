@@ -1,8 +1,10 @@
 package com.phoenix.employee.repository;
 
-import com.phoenix.employee.model.employee;
+import com.phoenix.employee.model.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface EmployeeRepository extends JpaRepository<employee,Long> {
+@Repository
+public interface EmployeeRepository extends JpaRepository<Employee,Long> {
 
 }
