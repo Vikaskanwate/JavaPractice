@@ -25,4 +25,9 @@ public class EmployeeController {
     public ResponseEntity<Employee> addEmployee (@RequestBody Employee emp){
         return new ResponseEntity<>(employeeService.addEmployee(emp),HttpStatus.OK);
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Employee> getEmployee(@PathVariable Long id){
+        return new ResponseEntity<>(employeeService.getEmployee(id),HttpStatus.OK);
+    }
 }
