@@ -23,9 +23,17 @@ public class EmployeeService {
     }
 
     public Employee getEmployee(Long id){
-//        Optional<Employee> emp =  employeeRepository.findById(id);
-//        return emp.orElse(null);
         return employeeRepository.findById(id).orElse(null);
+    }
+
+    public void deleteEmployee(Long id){
+        Optional<Employee> employee = employeeRepository.findById(id);
+        if(employee.isPresent()){
+            var emp = employee.get();
+            employeeRepository.delete(emp);
+        }
+        else
+            throw new RuntimeException("employee not found");
     }
 
 }

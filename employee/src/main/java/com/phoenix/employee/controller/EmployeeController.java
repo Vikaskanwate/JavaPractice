@@ -3,6 +3,7 @@ package com.phoenix.employee.controller;
 import com.phoenix.employee.model.Employee;
 import com.phoenix.employee.service.EmployeeService;
 import lombok.AllArgsConstructor;
+import org.apache.catalina.connector.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -29,5 +30,11 @@ public class EmployeeController {
     @GetMapping("/{id}")
     public ResponseEntity<Employee> getEmployee(@PathVariable Long id){
         return new ResponseEntity<>(employeeService.getEmployee(id),HttpStatus.OK);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteEmployee(@PathVariable Long id) {
+        employeeService.deleteEmployee(id);
+        return new ResponseEntity<>("Employee deleted Successfully",HttpStatus.OK);
     }
 }
