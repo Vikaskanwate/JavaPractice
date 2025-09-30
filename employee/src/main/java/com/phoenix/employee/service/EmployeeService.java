@@ -23,12 +23,9 @@ public class EmployeeService {
     }
 
     public Employee getEmployee(Long id){
-        Optional<Employee> emp =  employeeRepository.findById(id);
-        if(emp.isPresent()){
-            var emp1 = emp.get();
-            return  emp1;
-        }
-        return null;
+//        Optional<Employee> emp =  employeeRepository.findById(id);
+//        return emp.orElse(null);
+        return employeeRepository.findById(id).orElse(null);
     }
 
 }
