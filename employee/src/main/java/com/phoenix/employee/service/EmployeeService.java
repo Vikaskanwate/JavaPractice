@@ -36,5 +36,11 @@ public class EmployeeService {
             throw new RuntimeException("employee not found");
     }
 
+    public Employee updateEmployee(){
+        return null;
+    }
+
 }
+
+
 
