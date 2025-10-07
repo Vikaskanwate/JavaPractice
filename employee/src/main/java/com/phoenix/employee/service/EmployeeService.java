@@ -1,5 +1,6 @@
 package com.phoenix.employee.service;
 
+import com.phoenix.employee.exception.EmployeeNotFoundException;
 import com.phoenix.employee.model.Employee;
 import com.phoenix.employee.repository.EmployeeRepository;
 import lombok.AllArgsConstructor;
@@ -23,7 +24,7 @@ public class EmployeeService {
     }
 
     public Employee getEmployee(Long id){
-        return employeeRepository.findById(id).orElse(null);
+        return employeeRepository.findById(id).orElseThrow(()-> new EmployeeNotFoundException("Employee not found"));
     }
 
     public void deleteEmployee(Long id){
@@ -33,7 +34,7 @@ public class EmployeeService {
             employeeRepository.delete(emp);
         }
         else
-            throw new RuntimeException("employee not found");
+            throw new EmployeeNotFoundException("employee not found");
     }
 
     public Employee updateEmployee(Long id, Employee updateEmp){
@@ -47,7 +48,7 @@ public class EmployeeService {
             return employeeRepository.save(emp1);
         }
         else
-            throw new RuntimeException("Id not found");
+            throw new EmployeeNotFoundException("Id not found");
     }
 
 }
