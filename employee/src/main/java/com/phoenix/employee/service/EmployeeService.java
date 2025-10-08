@@ -48,7 +48,7 @@ public class EmployeeService {
             return employeeRepository.save(emp1);
         }
         else
-            throw new EmployeeNotFoundException("Id not found");
+            throw new EmployeeNotFoundException("Employee with Id not found");
     }
 
 }
