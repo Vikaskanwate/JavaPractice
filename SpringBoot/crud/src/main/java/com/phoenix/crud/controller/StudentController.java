@@ -44,5 +44,8 @@ public class StudentController {
         return new ResponseEntity<>("id not found",HttpStatus.NOT_FOUND);
     }
 
-
+    @PutMapping("/{id}")
+    public ResponseEntity<Student> updateStudent(@PathVariable Long id, @RequestBody Student student){
+        return new ResponseEntity<>(studentService.updateStudent(id,student),HttpStatus.OK);
+    }
 }
