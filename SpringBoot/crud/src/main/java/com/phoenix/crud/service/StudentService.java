@@ -5,6 +5,7 @@ import com.phoenix.crud.repository.StudentRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class StudentService {
@@ -25,9 +26,17 @@ public class StudentService {
         try{
             studentRepository.save(student);
             return true;
-        }catch (Exception e){
+        }catch (Exception e) {
             return false;
         }
+    }
+
+    public Student getStudentById(Long id){
+        Optional<Student> optional = studentRepository.findById(id);
+        if(optional.isPresent()){
+            return optional.get();
+        }else
+            throw new RuntimeException();
 
     }
 

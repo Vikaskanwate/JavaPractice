@@ -32,5 +32,9 @@ public class StudentController {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Not added");
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Student> getStudentById(@PathVariable Long id){
+        return new ResponseEntity<>(studentService.getStudentById(id),HttpStatus.OK);
+    }
 
 }
