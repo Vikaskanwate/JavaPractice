@@ -40,4 +40,26 @@ public class StudentService {
 
     }
 
+    public boolean deleteStudentById(Long id){
+        Optional<Student> optional = studentRepository.findById(id);
+        if(optional.isPresent()){
+            studentRepository.delete(optional.get());
+            return true;
+        }else
+            return false;
+    }
+
+    public Student updateStudent(Long id,Student upStudent){
+        Optional<Student> optionalStudent = studentRepository.findById(id);
+        if(optionalStudent.isPresent()) {
+            var student = optionalStudent.get();
+            student.setName(upStudent.getName());
+            student.setCourse(upStudent.getCourse());
+            student.setDepartment(upStudent.getDepartment());
+            return studentRepository.save(student);
+        }
+        else
+            throw new RuntimeException("Student with id " + id + "not found");
+    }
+
 }
