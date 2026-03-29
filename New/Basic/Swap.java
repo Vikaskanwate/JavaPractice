@@ -10,7 +10,14 @@ class D{
         a = a + b;
         b = a - b;
         a = a - b;
-        System.out.println("After swapping a = "+a + "and b = "+b);
+        System.out.println("After swapping a = "+a + " and b = "+b);
+    }
+    static void swap1(int a , int b){
+        System.out.println("Before swapping a = "+a +" and b = "+b);
+        a = a * b;
+        b = a / b;
+        a = a / b;
+        System.out.println("After swapping a = "+a + " and b = "+b);
     }
 }
 
@@ -21,7 +28,7 @@ public class Swap {
             int a = sc.nextInt();
             System.out.println("Enter second number");
             int b = sc.nextInt();
-            D.swap(a,b);
+            D.swap1(a,b);
         }
         
     }
