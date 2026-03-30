@@ -3,7 +3,7 @@ import java.util.Scanner;
 class D{
     static void swap(int a,int b){
         System.out.println("Before swapping a = "+a +" and b = "+b);
-        int t;
+        
         // t = a;
         // a = b;
         // b = t;
