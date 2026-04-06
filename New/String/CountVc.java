@@ -15,5 +15,5 @@ public class CountVc {
         }
         System.out.println("Vowels: " + vowels + ", consonants: " + cons);
     }    
-
+    
 }
