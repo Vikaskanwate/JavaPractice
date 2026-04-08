@@ -11,21 +11,22 @@ public class PrimeInArr {
         return true;
     }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the number");
-        int num = sc.nextInt();
-        int[] arr = new int[num];
-        for(int i = 0;i < num;i++){
+        try (Scanner sc = new Scanner(System.in)) {
             System.out.println("Enter the number");
-            arr[i] = sc.nextInt();
-        }
-        int sum = 0;
-        for(int i = 0; i < arr.length; i++){
-            if(isPrime(arr[i])){
-                System.out.println(arr[i]  + " ");
-                sum+= arr[i];
+            int num = sc.nextInt();
+            int[] arr = new int[num];
+            for(int i = 0;i < num;i++){
+                System.out.println("Enter the number");
+                arr[i] = sc.nextInt();
             }
+            int sum = 0;
+            for(int i = 0; i < arr.length; i++){
+                if(isPrime(arr[i])){
+                    System.out.println(arr[i]  + " ");
+                    sum+= arr[i];
+                }
+            }
+            System.out.println("Sum of prime numbers is "+sum);
         }
-        System.out.println("Sum of prime numbers is "+sum);
     }
 }
