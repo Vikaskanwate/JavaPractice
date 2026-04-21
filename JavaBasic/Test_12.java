@@ -1,5 +1,12 @@
 package JavaBasic;
+// Find the longest continuous sequence of vowels and consonants.
+// Example:
+// Input → "beautiful"  
+// Output →
 
+// Longest vowel streak: 3 (eau)
+
+// Longest consonant streak: 2 (t f)
 public class Test_12 {
     public static void main(String[] args) {
         String s = "beautiful";
