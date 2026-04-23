@@ -1,5 +1,5 @@
 package JavaBasic;
-// find the length of longest substring
+// find the length of longest non-repeating substring 
 public class Test_15{
     public static void main(String[] args) {
         String s = "abcabcbb";
