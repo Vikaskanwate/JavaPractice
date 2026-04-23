@@ -1,5 +1,5 @@
 package JavaBasic;
-// find logest vowel in string
+// find longest consecutive vowel in string
 public class Test_13 {
     public static void main(String[] args) {
         String s = "beautiful";
