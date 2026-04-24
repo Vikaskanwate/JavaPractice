@@ -6,7 +6,7 @@ public class Test_16 {
        return false;
     }
     public static void main(String args[]){
-        String s = "ac";
+        String s = "abcbab";
         if(s.length() == 1){
             System.out.println(s); 
             return;
@@ -15,7 +15,7 @@ public class Test_16 {
         int maxCount = 0;
         String longestString = "";
         for(int i = 0; i < s.length();i++){
-            for(int j = i + 1; j < s.length(); j++){
+            for(int j = i + 1; j <= s.length(); j++){
                 String str = s.substring(i, j);
                 if(isPalindrome(str)){
                     count = str.length();
