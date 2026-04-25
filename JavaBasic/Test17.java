@@ -17,19 +17,36 @@ package JavaBasic;
 
 public class Test17 {
     public static void main(String[] args) {
-        String s = " Java is IS fun FUN ";
-        String str [] = s.trim().toLowerCase().split(" ");
-        String concatedString = "";
-        for(int i = 0; i < str.length; i++){
-            concatedString = str[i].substring(0,1).toUpperCase().concat(str[i].substring(1));
-            System.out.println(concatedString);
+        // String s = " Java is IS fun FUN ";
+        String s = " HELLO hello WORLD world ";
+        String words[] = s.trim().toLowerCase().split("\\s+");
+
+        for (int i = 0; i < words.length; i++) {
+            words[i] = words[i].substring(0,1).toUpperCase() + words[i].substring(1);
         }
-        String newString = "";
-        for(int i = 0; i < str.length;i++){
-            if(str.toString().equalsIgnoreCase(concatedString)){
-                newString+=concatedString;
+        String cleaned = "";
+        for(int i = 0; i < words.length; i++){
+            if(!cleaned.toLowerCase().contains(words[i].toLowerCase())){
+                cleaned += words[i] + " ";
+            }
+        }       
+        cleaned = cleaned.trim();
+        int vowels = 0, consonants = 0;
+        for(int i = 0; i < cleaned.length();i++){
+            if(Character.isLetter(cleaned.charAt(i))){
+                if("aeiouAEIOU".indexOf(cleaned.charAt(i))!= -1) vowels++;
+                else consonants++;
             }
         }
-        System.out.println(newString);
+
+        String [] finalWord = cleaned.split(" ");
+        String longest = "";
+        for(String w : finalWord){
+            if(w.length() > longest.length()) longest = w;
+        }
+        System.out.println("Cleaned sentence: " + cleaned);
+        System.out.println("Vowels: " + vowels);
+        System.out.println("Consonants: " + consonants);
+        System.out.println("Longest word: " + longest);
     }
 }
