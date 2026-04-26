@@ -15,7 +15,7 @@
 // Find the longest word in the sentence.
 package JavaBasic;
 
-public class Test17 {
+public class Test_17 {
     public static void main(String[] args) {
         // String s = " Java is IS fun FUN ";
         String s = " HELLO hello WORLD world ";
