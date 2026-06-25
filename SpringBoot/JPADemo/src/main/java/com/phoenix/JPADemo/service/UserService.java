@@ -53,4 +53,16 @@ public class UserService {
         return userRepository.findById(id)
             .map(this::toResponse);
     }
+
+    public void deleteUser(Long id) {
+        if(userRepository.existsById(id))
+            userRepository.deleteById(id);
+
+    }
+
+    public Optional<UserResDto> findByEmail(String email){
+        Optional<User> us = userRepository.findByEmail(email);
+        return us.map(this::toResponse);
+    }
+
 }
