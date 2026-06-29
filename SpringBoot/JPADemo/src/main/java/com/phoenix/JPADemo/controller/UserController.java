@@ -47,4 +47,6 @@ public class UserController {
         Optional<UserResDto> us = userService.findByEmail(email);
         return us.map(ResponseEntity::ok).orElseGet(()->ResponseEntity.status(404).build());
     }
+
+
 }

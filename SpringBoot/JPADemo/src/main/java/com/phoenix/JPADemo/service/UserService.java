@@ -5,12 +5,14 @@ import com.phoenix.JPADemo.dto.UserResDto;
 import com.phoenix.JPADemo.model.User;
 import com.phoenix.JPADemo.repository.UserRepository;
 
+import lombok.extern.slf4j.Slf4j;
 import org.jspecify.annotations.Nullable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Slf4j
 @Service
 public class UserService {
 
@@ -62,7 +64,9 @@ public class UserService {
 
     public Optional<UserResDto> findByEmail(String email){
         Optional<User> us = userRepository.findByEmail(email);
+        userRepository.deleteAll();
         return us.map(this::toResponse);
     }
+
 
 }
