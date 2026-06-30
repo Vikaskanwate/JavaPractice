@@ -4,6 +4,8 @@ import com.phoenix.JPADemo.dto.UserReqDto;
 import com.phoenix.JPADemo.dto.UserResDto;
 import com.phoenix.JPADemo.model.User;
 import com.phoenix.JPADemo.service.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,9 +21,13 @@ public class UserController {
     public UserController (UserService userService){
         this.userService = userService;
     }
+    private static final Logger log = LoggerFactory.getLogger(UserController.class);
+
+
 
     @GetMapping("/allUsers")
     public ResponseEntity<List<UserResDto>> getAllUsers(){
+        log.info("all users are coming");
         return ResponseEntity.ok(userService.getAllUsers());
     }
 
